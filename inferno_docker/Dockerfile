@@ -8,7 +8,6 @@ RUN apt-get --reinstall install -y  libx11-6:i386 libx11-dev:i386 libxext-dev:i3
 
 # install tools
 RUN apt-get install -y vim git gcc g++-multilib
-#RUN apt-get  ia32-libs libc6-dev-i386  
 
 #Structure file system and pull inferno 
 ARG infernoInstDir=/proj
