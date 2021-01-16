@@ -41,7 +41,7 @@ mk
 ```
 
 ### Volume mount your local instance of inferno-os source
-Optionally users can modify the `docker-compose.yml' to volume mount source code from the host machine to the contianer
+Optionally users can modify the `docker-compose.yml` to volume mount source code from the host machine to the contianer
 
 First replace the mkconfig file in your host machines source code with the one located in 
 
