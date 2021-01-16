@@ -54,13 +54,18 @@ cd inferno_docker
 vi docker-compose.yml
 ```
 
-Uncomment the "volumes" section and provide your local path to the inferno-os repo
+Uncomment the "volumes" section to volume mount the source into the container
 
 ```
     # (optional) Volume mount your locally stored inferno-os repo
     volumes:
-            - <your hosts path to the inferno repo>/inferno-os:/proj/inferno-os
+            - ${INFERNO_ROOT}:/proj/inferno-os
+```
 
+provide your local path to the inferno-os repo
+
+``` bash
+export INFERNO_ROOT="<your hosts path to source>"
 ```
 
 ### Display

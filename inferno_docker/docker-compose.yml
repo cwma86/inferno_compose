@@ -5,8 +5,10 @@ services:
     build: .
     # (optional) Volume mount your locally stored inferno-os repo
     #volumes:
-    #  - $HOME/proj/cs543/inferno-os:/proj/inferno-os
+    #  - ${INFERNO_ROOT}:/proj/inferno-os
     environment:
       - DISPLAY=${DISPLAY}  
     stdin_open: true
     tty: true
+    labels:
+        inferno.name: "inferno_docker_inferno_1"
