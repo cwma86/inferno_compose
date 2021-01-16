@@ -19,6 +19,7 @@ sudo apt-get install -y docker-compose
 Starting the container
 
 ```bash
+cd inferno_docker
 docker-compose up
 ```
 
@@ -38,6 +39,30 @@ Building inferno (from container bash terminal)
 cd /proj/inferno-os
 mk
 ```
+
+### Volume mount your local instance of inferno-os source
+Optionally users can modify the `docker-compose.yml' to volume mount source code from the host machine to the contianer
+
+First replace the mkconfig file in your host machines source code with the one located in 
+
+```bash
+cp -f mkconfig <your hosts path to the inferno repo>/inferno-os/mkconfig
+```
+
+```bash
+cd inferno_docker
+vi docker-compose.yml
+```
+
+Uncomment the "volumes" section and provide your local path to the inferno-os repo
+
+```
+    # (optional) Volume mount your locally stored inferno-os repo
+    volumes:
+            - <your hosts path to the inferno repo>/inferno-os:/proj/inferno-os
+
+```
+
 
 
 ## Contributing
