@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  inferno:
+    network_mode: host
+    build: .
+    # (optional) Volume mount your locally stored inferno-os repo
+    volumes:
+            - $HOME/proj/cs543/inferno-os:/proj/inferno-os
+            - $pwd/mkconfig:/proj/inferno-os/mkconfig
+    stdin_open: true
+    tty: true
+    command: bash
