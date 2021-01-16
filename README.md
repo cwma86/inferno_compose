@@ -63,6 +63,17 @@ Uncomment the "volumes" section and provide your local path to the inferno-os re
 
 ```
 
+### Display
+
+if you have any time of display forwarding you will want to set the environement variable for DISPLAY on the host machine 
+
+from the inferno container
+
+``` bash
+emu
+wm/wm
+```
+
 
 
 ## Contributing

@@ -26,5 +26,4 @@ COPY mkconfig $infernoRoot/
 # Build inferno
 RUN cd $infernoRoot && ./makemk.sh && mk -s nuke mkdirs install
 
-#USER dev
 CMD ["bash"]
